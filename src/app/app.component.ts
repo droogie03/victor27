@@ -19,6 +19,7 @@ export class AppComponent implements OnInit{
   showQuizz: boolean = false;
   showDoors: boolean = false;
   showHandman: boolean = false;
+  showGameOver: boolean = false;
 
   constructor(private datepipe: DatePipe){}
 
@@ -40,6 +41,7 @@ export class AppComponent implements OnInit{
     this.showExplanation = false;
     this.showHandman = false;
     this.showQuizz = false; 
+    this.showGameOver = false;
     this.showHome = true;
   }
 
@@ -51,6 +53,16 @@ export class AppComponent implements OnInit{
 
   showQuizzComponent(): void{
     this.showExplanation = false;
+    this.showQuizz = true;
+  }
+
+  subtractOneLive():void{
+    this.livesNumber--;
+  }
+
+  restartGame(): void{
+    this.livesNumber = 3;
+    this.showGameOver = false;
     this.showQuizz = true;
   }
   

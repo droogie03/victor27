@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ExplanationComponent } from './explanation/explanation.component';
 import { QuizzComponent } from './quizz/quizz.component';
+import { GameOverComponent } from './game-over/game-over.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ExplanationComponent,
-    QuizzComponent
+    QuizzComponent,
+    GameOverComponent
   ],
   imports: [
     BrowserModule,
