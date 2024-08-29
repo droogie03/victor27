@@ -56,6 +56,11 @@ export class AppComponent implements OnInit{
     this.showQuizz = true;
   }
 
+  showDoorsComponent():void{
+    this.showQuizz = false;
+    this.showDoors = true;
+  }
+
   subtractOneLive():void{
     this.livesNumber--;
   }
