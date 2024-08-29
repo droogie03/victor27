@@ -1,0 +1,23 @@
+<img class="background" [src]="'/assets/alice-in-borderland.jpg'" >
+<div id="container" *ngIf="!isGameStarted && !isGameCancelled">
+    <div class="container-inner">
+      <div class="content">
+        <p>Are you ready?</p>
+      </div>
+      <div class="buttons">
+        <button type="button" class="confirm" (click)="startGame()">Continue anyway</button>
+        <button type="button" class="cancel" (click)="noStartGame()">Ok</button>
+      </div>
+    </div>
+  </div>
+<div id="container" *ngIf="isGameStarted">
+    <div class="container-inner">
+      <div class="content">
+        <p>So...Are you ready?</p>
+      </div>
+      <div class="buttons">
+        <button type="button" class="confirm" (click)="vistorIsReady()">Yes</button>
+        <button type="button" class="cancel" (click)="victorIsNotReady()">No</button>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,116 @@
+/*
+@font-face {
+  font-family: 'neontubes';
+  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
+  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2") format("woff2"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff") format("woff"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+  */
+
+ @import url('https://fonts.cdnfonts.com/css/baroque-explosion');
+
+                
+
+  h1{
+    font-family: 'Baroque Explosion', sans-serif;                                                
+    /*font-family: 'DO Stylish Baroque', sans-serif;                                       */
+    font-size: 80px;  
+    color: white;  
+    text-align: center;
+    margin: 0 auto;
+                                 
+}    
+
+.welcome:hover{
+  font-size: 82px;
+  cursor: pointer;
+}
+
+.disabled{
+  pointer-events: none;
+}
+
+.bigger:hover{
+  font-size: 81px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.images {
+  display: flex;
+  gap: 1px; 
+  position: absolute;
+  left: 0;
+}
+
+
+
+.images img{
+  width: 50px; /* Ancho de las imágenes pequeñas */
+  height: auto;
+}
+
+.starw{
+    width: fit-content;
+    margin: auto;
+}
+
+header{
+    height: 90px;
+    background-color: black;
+} 
+
+.content{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:after{
+  font-family: "Skranji", cursive;
+  position: absolute;
+  width: 12em;
+  background-color: #3B484A;
+  content: attr(data-tip);
+  padding:0.6em 0;
+  color: #ffffff;
+  margin: auto;
+  left: 1.5em;
+  right: 0;
+  bottom: 2.5em;
+  text-align: center;
+  border-radius: 0.2em;
+  opacity: 0.7;
+}
+
+a:before{
+  position: absolute;
+  content: "";
+  height: 0;
+  width:0;
+  border-top: 0.5em solid #3B484A;
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 2em;
+  opacity: 0.7;
+}
+
+
+a:before, a:after{
+  display: none;
+}
+
+a:hover:before, a:hover:after{
+  display: block;
+}
+
+
+

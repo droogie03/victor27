@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="dialog-container">
+        <img [src]="'../assets/gojo-explaining.png'" class="gojo">
+        <div class="dialog-box">
+          <p>{{gojoExplanation}}</p>
+          <button class="nextText" *ngIf="countExplanation < (gojoExplanationArray.length - 1)" (click)="nextExplanation()">>></button>
+        </div>
+    </div>
+    <button *ngIf="countExplanation == (gojoExplanationArray.length - 1)" class="buttonFirstGame" (click)="startFirstGame()">EMPEZAR</button>
+</div>
