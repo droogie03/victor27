@@ -6,12 +6,13 @@
         <img *ngIf="livesNumber > 1" class="vader1" [src]="'/assets/full-heart.png'" >
         <img *ngIf="livesNumber == 3" class="vader2" [src]="'/assets/full-heart.png'" >
       </a></div>
-      <div [ngClass]="showHome ? 'disabled' : 'welcome'" (click) = "returnHome()"><h1 class="bigger">VICTOR IN BORDERLAND</h1></div>
+      <div [ngClass]="(showHome || showGameOver) ? 'disabled' : 'welcome'" (click) = "returnHome()"><h1 class="bigger">VICTOR IN BORDERLAND</h1></div>
     </div>
   </header>
   <section class="content">
     <app-home *ngIf="showHome" [isGameStarted]="isGameStarted" (vistorIsReadyToStartTheGame)="victorIsReadyToStart()"></app-home>
     <app-explanation *ngIf="showExplanation" (showQuizzComponent)="showQuizzComponent()"></app-explanation>
     <app-quizz *ngIf="showQuizz" ></app-quizz>
+    <app-game-over *ngIf="livesNumber == 0" (restartGameInQuizz)="restartGame()"></app-game-over>
   </section>
 </main>

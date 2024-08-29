@@ -3,3 +3,16 @@
     width: 100%;
     opacity: 0.9;
 }
+
+.game-over{
+    position: fixed;
+    top: 3%;
+    left: 7%;
+    width: 500px;
+    height: 500px;
+}
+
+.game-over:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

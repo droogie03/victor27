@@ -6,6 +6,6 @@
           <button class="nextText" *ngIf="countExplanation < (gojoExplanationArray.length - 1)" (click)="nextExplanation()">>></button>
         </div>
     </div>
-    <img *ngIf="countExplanation == (gojoExplanationArray.length - 1)" class="game-over" [src]="'../assets/funny-gojo.png'">
+    <img *ngIf="countExplanation == (gojoExplanationArray.length - 1)" class="funny-gojo" [src]="'../assets/funny-gojo.png'">
     <button *ngIf="countExplanation == (gojoExplanationArray.length - 1)" class="buttonFirstGame" (click)="startFirstGame()">EMPEZAR</button>
 </div>
