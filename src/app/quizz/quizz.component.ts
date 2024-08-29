@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class QuizzComponent {
 
+  isExplanationClicked: boolean = false;
+
+  changeExplanationStatus():void{
+    this.isExplanationClicked = !this.isExplanationClicked;
+  }
+
 }

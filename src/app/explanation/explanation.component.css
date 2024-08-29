@@ -60,7 +60,7 @@
 
   .buttonFirstGame{
     font-size: large;
-    position: absolute;
+    position: fixed;
     bottom: 50px; 
     right: 50px;
     padding: 10px 20px;
@@ -99,7 +99,26 @@
 
 .game-over{
     position: absolute;
-    top: 30%;
-    right: 40%;
+    top: 15%;
+    right: 35%;
+    opacity: 0; /* Comienza invisible */
+    transform: scale(0) rotate(0deg); /* Empieza con tamaño 0 y sin rotación */
+    animation: growRotate 1.2s ease-in-out forwards; /* Animación de 1.5 segundos */
 }
+
+@keyframes growRotate {
+  0% {
+    opacity: 0; /* Imagen invisible al inicio */
+    transform: scale(0) rotate(0deg); /* Comienza con tamaño 0 y sin rotación */
+  }
+  50% {
+    opacity: 1; /* Imagen empieza a ser visible */
+    transform: scale(1.2) rotate(180deg); /* A mitad del tiempo, más grande y rotada a 180 grados */
+  }
+  100% {
+    opacity: 1; /* Imagen completamente visible */
+    transform: scale(1) rotate(0deg); /* Termina en tamaño original y sin rotación */
+  }
+}
+
 
