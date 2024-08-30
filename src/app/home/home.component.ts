@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit{
 
   startGame(){
     this.isGameStarted = true;
-
   }
 
   noStartGame(){

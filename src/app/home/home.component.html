@@ -1,19 +1,11 @@
 <img class="background" [src]="'/assets/alice-in-borderland.jpg'" >
 <div id="container" *ngIf="!isGameStarted && !isGameCancelled">
-    <div class="container-inner">
-      <div class="content">
-        <p>Are you ready?</p>
-      </div>
-      <div class="buttons">
-        <button type="button" class="confirm" (click)="startGame()">Continue anyway</button>
-        <button type="button" class="cancel" (click)="noStartGame()">Ok</button>
-      </div>
-    </div>
-  </div>
+    <app-countdown class="countdown-component" (gameCanStart)="startGame()"></app-countdown>
+</div>
 <div id="container" *ngIf="isGameStarted">
     <div class="container-inner">
       <div class="content">
-        <p>So...Are you ready?</p>
+        <p>Are you ready?</p>
       </div>
       <div class="buttons">
         <button type="button" class="confirm" (click)="vistorIsReady()">Yes</button>

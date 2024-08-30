@@ -1,12 +1,17 @@
+.background{
+    width: 100%;
+    opacity: 0.75;
+}
+
 .container{
+    overflow: hidden;
+    position: relative;
     min-height: 100vh;
     margin: 0; 
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    padding: 20px;
-    background: #11111174;
 }
 
 .blurred{
@@ -47,9 +52,9 @@
   }
 
   .close-popup-explanation:hover{
-    background: #add0e8;
+    background: #e8c5ad;
     box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
-    color: #74e6e0;
+    color: #e69074;
     text-decoration: none;
     text-shadow: -1px -1px 0 #136a65;
     -webkit-transition: all 250ms linear;

@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ExplanationComponent } from './explanation/explanation.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { GameOverComponent } from './game-over/game-over.component';
+import { CountdownComponent } from './countdown/countdown.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GameOverComponent } from './game-over/game-over.component';
     HomeComponent,
     ExplanationComponent,
     QuizzComponent,
-    GameOverComponent
+    GameOverComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,

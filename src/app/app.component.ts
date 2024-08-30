@@ -29,7 +29,7 @@ export class AppComponent implements OnInit{
 
   checkDate(): void{
     const today = this.datepipe.transform(new Date(), 'yyyy-MM-dd');
-    const victorBirthday: string = '2024-08-28';
+    const victorBirthday: string = '2024-09-03';
     if(today && today >= victorBirthday){
       this.isGameStarted = true;
     }
