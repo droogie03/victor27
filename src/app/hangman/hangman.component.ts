@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-hangman',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./hangman.component.css']
 })
 export class HangmanComponent {
+
+  @Output() sustractOneLive: EventEmitter<void> = new EventEmitter<void>();
+  @Output() returnHome: EventEmitter<void> = new EventEmitter<void>();
   isExplanationClicked: boolean = false;
   isPistaClicked: boolean = false;
 
@@ -15,6 +18,14 @@ export class HangmanComponent {
 
   changePistaStatus():void{
     this.isPistaClicked = !this.isPistaClicked;
+  }
+
+  wrongAnswerIsClicked(): void{
+    this.sustractOneLive.emit();
+  }
+
+  finishGame(): void{
+    this.returnHome.emit();
   }
 
 }

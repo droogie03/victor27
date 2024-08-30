@@ -102,7 +102,7 @@
     right: 35%;
     opacity: 0; /* Comienza invisible */
     transform: scale(0) rotate(0deg); /* Empieza con tamaño 0 y sin rotación */
-    animation: growRotate 1.2s ease-in-out forwards; /* Animación de 1.5 segundos */
+    animation: growRotate 1.1s ease-in-out forwards; /* Animación de 1.5 segundos */
 }
 
 @keyframes growRotate {
