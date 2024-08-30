@@ -10,11 +10,11 @@
     </div>
   </header>
   <section class="content">
-    <app-home *ngIf="showHome" [isGameStarted]="isGameStarted" (vistorIsReadyToStartTheGame)="victorIsReadyToStart()"></app-home>
-    <app-explanation *ngIf="showExplanation" (showQuizzComponent)="showQuizzComponent()"></app-explanation>
-    <app-quizz *ngIf="showQuizz" (wrongAnswerIsClicked)="subtractOneLive()" (showDoorsGame)="showDoorsComponent()"></app-quizz>
-    <app-doors *ngIf="showDoors" (wrongAnswerIsClicked)="subtractOneLive()" (showHangmanGame)="showHangmanComponent()"></app-doors>
-    <app-hangman *ngIf="showHangman"></app-hangman>
+    <app-home *ngIf="showHome && livesNumber != 0" [isGameStarted]="isGameStarted" (vistorIsReadyToStartTheGame)="victorIsReadyToStart()"></app-home>
+    <app-explanation *ngIf="showExplanation && livesNumber != 0" (showQuizzComponent)="showQuizzComponent()"></app-explanation>
+    <app-quizz *ngIf="showQuizz && livesNumber != 0" (sustractOneLive)="subtractOneLive()" (showDoorsGame)="showDoorsComponent()"></app-quizz>
+    <app-doors *ngIf="showDoors && livesNumber != 0" (sustractOneLive)="subtractOneLive()" (showHangmanGame)="showHangmanComponent()"></app-doors>
+    <app-hangman *ngIf="showHangman && livesNumber != 0"></app-hangman>
     <app-game-over *ngIf="livesNumber == 0" (restartGameInQuizz)="restartGame()"></app-game-over>
   </section>
 </main>
