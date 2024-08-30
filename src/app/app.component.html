@@ -13,6 +13,8 @@
     <app-home *ngIf="showHome" [isGameStarted]="isGameStarted" (vistorIsReadyToStartTheGame)="victorIsReadyToStart()"></app-home>
     <app-explanation *ngIf="showExplanation" (showQuizzComponent)="showQuizzComponent()"></app-explanation>
     <app-quizz *ngIf="showQuizz" (wrongAnswerIsClicked)="subtractOneLive()" (showDoorsGame)="showDoorsComponent()"></app-quizz>
+    <app-doors *ngIf="showDoors" (wrongAnswerIsClicked)="subtractOneLive()" (showHangmanGame)="showHangmanComponent()"></app-doors>
+    <app-hangman *ngIf="showHangman"></app-hangman>
     <app-game-over *ngIf="livesNumber == 0" (restartGameInQuizz)="restartGame()"></app-game-over>
   </section>
 </main>

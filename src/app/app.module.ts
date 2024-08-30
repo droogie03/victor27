@@ -8,6 +8,8 @@ import { ExplanationComponent } from './explanation/explanation.component';
 import { QuizzComponent } from './quizz/quizz.component';
 import { GameOverComponent } from './game-over/game-over.component';
 import { CountdownComponent } from './countdown/countdown.component';
+import { DoorsComponent } from './doors/doors.component';
+import { HangmanComponent } from './hangman/hangman.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CountdownComponent } from './countdown/countdown.component';
     ExplanationComponent,
     QuizzComponent,
     GameOverComponent,
-    CountdownComponent
+    CountdownComponent,
+    DoorsComponent,
+    HangmanComponent
   ],
   imports: [
     BrowserModule,

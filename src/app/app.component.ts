@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
   showExplanation: boolean = false;
   showQuizz: boolean = false;
   showDoors: boolean = false;
-  showHandman: boolean = false;
+  showHangman: boolean = false;
   showGameOver: boolean = false;
 
   constructor(private datepipe: DatePipe){}
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit{
     this.isVictorReady = false;
     this.showDoors = false;
     this.showExplanation = false;
-    this.showHandman = false;
+    this.showHangman = false;
     this.showQuizz = false; 
     this.showGameOver = false;
     this.showHome = true;
@@ -59,6 +59,11 @@ export class AppComponent implements OnInit{
   showDoorsComponent():void{
     this.showQuizz = false;
     this.showDoors = true;
+  }
+
+  showHangmanComponent():void{
+    this.showDoors = false;
+    this.showHangman = true;
   }
 
   subtractOneLive():void{

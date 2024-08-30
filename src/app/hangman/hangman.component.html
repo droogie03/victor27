@@ -1,0 +1,18 @@
+<div class="container" [class.blurred]="isExplanationClicked || isPistaClicked">
+    <img class="background" [src]="'/assets/alice-card.jpg'" >
+    <button class="explanation-quizz" (click)="changeExplanationStatus()">EXPLICACIÓN</button>
+    
+</div>
+<div *ngIf="isExplanationClicked" class="popup-explanation">
+    <h2><b>EL JUEGO DEL AHORCADO</b></h2>
+    <p>Pues el juego del ahorcado de toda la vida para adivinar tu último regalo majo.<br> Dirás, ¡pero si solo he tenido uno!<br>Bueno majo, la inflación y el capitalismo son muy duros...<br> Suerte!</p>
+    <div class="button-containers">
+        <button class="close-popup-explanation" (click)="changePistaStatus()">Pista</button>
+        <button class="close-popup-explanation" (click)="changeExplanationStatus()">Cerrar</button>
+    </div>
+</div>
+<div *ngIf="isPistaClicked" class="popup-explanation">
+    <h2><b>PISTA</b></h2>
+    <p>Pues nuestro plato estrella</p>
+    <button class="close-popup-explanation" (click)="changePistaStatus()">Cerrar</button>
+</div>
