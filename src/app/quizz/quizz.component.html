@@ -2,6 +2,26 @@
 <div class="container" [class.blurred]="isExplanationClicked">
     <img class="background" [src]="'/assets/alice-card.jpg'" >
     <button class="explanation-quizz" (click)="changeExplanationStatus()">EXPLICACIÓN</button>
+    <div class="quizz-container">
+        <h1>Quizz</h1>
+        <div class="quizz">
+            <h2 id="question">{{this.questions[currentQuestion].question}}</h2>
+            <div class="answer-buttons">
+                <button class="button" [disabled]="isAnswerSelected" [class.correct]="isAnswerSelected && this.questions[currentQuestion].answers[0].solution" 
+                [class.incorrect]="isAnswerSelected && !this.questions[currentQuestion].answers[0].solution" 
+                (click)="answerSelected(this.questions[currentQuestion].answers[0].solution)">
+                    {{this.questions[currentQuestion].answers[0].text}}
+                </button>
+                <button class="button" [disabled]="isAnswerSelected" [class.correct]="isAnswerSelected && this.questions[currentQuestion].answers[1].solution" 
+                [class.incorrect]="isAnswerSelected && !this.questions[currentQuestion].answers[1].solution" 
+                (click)="answerSelected(this.questions[currentQuestion].answers[1].solution)">
+                    {{this.questions[currentQuestion].answers[1].text}}
+                 </button>
+            </div>
+            <button id="next-button" [ngStyle]="{'display': (isAnswerSelected && currentQuestion < questions.length - 1) ? 'block' : 'none'}" (click)="nextAnswer()">Siguiente</button>
+        </div>
+    </div>
+    <button *ngIf="isAnswerSelected && currentQuestion == questions.length - 1" class="buttonNextGame" (click)="nextGame()">SIGUIENTE</button>
     
 </div>
 <div *ngIf="isExplanationClicked" class="popup-explanation">

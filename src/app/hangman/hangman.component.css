@@ -19,8 +19,8 @@
 }
 
 .explanation-quizz{
-    position: fixed;
-    bottom: 10%;
+    position: absolute;
+    top: 60%;
     left: 5%;
     padding: 5px 20px;
     display: inline-block;
