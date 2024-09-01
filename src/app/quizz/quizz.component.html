@@ -6,17 +6,12 @@
         <h1>Quizz</h1>
         <div class="quizz">
             <h2 id="question">{{this.questions[currentQuestion].question}}</h2>
-            <div class="answer-buttons">
-                <button class="button" [disabled]="isAnswerSelected" [class.correct]="isAnswerSelected && this.questions[currentQuestion].answers[0].solution" 
-                [class.incorrect]="isAnswerSelected && !this.questions[currentQuestion].answers[0].solution" 
-                (click)="answerSelected(this.questions[currentQuestion].answers[0].solution)">
-                    {{this.questions[currentQuestion].answers[0].text}}
+            <div class="answer-buttons" *ngFor="let question of this.questions[currentQuestion].answers">
+                <button class="button" [disabled]="isAnswerSelected" [class.correct]="isAnswerSelected && question.solution" 
+                [class.incorrect]="isAnswerSelected && !question.solution" 
+                (click)="answerSelected(question.solution)">
+                    {{question.text}}
                 </button>
-                <button class="button" [disabled]="isAnswerSelected" [class.correct]="isAnswerSelected && this.questions[currentQuestion].answers[1].solution" 
-                [class.incorrect]="isAnswerSelected && !this.questions[currentQuestion].answers[1].solution" 
-                (click)="answerSelected(this.questions[currentQuestion].answers[1].solution)">
-                    {{this.questions[currentQuestion].answers[1].text}}
-                 </button>
             </div>
             <button id="next-button" [ngStyle]="{'display': (isAnswerSelected && currentQuestion < questions.length - 1) ? 'block' : 'none'}" (click)="nextAnswer()">Siguiente</button>
         </div>
