@@ -13,6 +13,7 @@ import { HangmanComponent } from './hangman/hangman.component';
 import { HangmanDisplayComponent } from './hangman-display/hangman-display.component';
 import { HangmanKeyboardComponent } from './hangman-keyboard/hangman-keyboard.component';
 import { HangmanQuestionComponent } from './hangman-question/hangman-question.component';
+import { HappyBirthdayComponent } from './happy-birthday/happy-birthday.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HangmanQuestionComponent } from './hangman-question/hangman-question.co
     HangmanComponent,
     HangmanDisplayComponent,
     HangmanKeyboardComponent,
-    HangmanQuestionComponent
+    HangmanQuestionComponent,
+    HappyBirthdayComponent
   ],
   imports: [
     BrowserModule,

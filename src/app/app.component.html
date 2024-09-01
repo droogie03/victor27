@@ -17,7 +17,8 @@
     <app-explanation *ngIf="showExplanation && livesNumber != 0" (showQuizzComponent)="showQuizzComponent()"></app-explanation>
     <app-quizz *ngIf="showQuizz && livesNumber != 0" (sustractOneLive)="subtractOneLive()" (showDoorsGame)="showDoorsComponent()"></app-quizz>
     <app-doors *ngIf="showDoors && livesNumber != 0" (sustractOneLive)="subtractOneLive()" (showHangmanGame)="showHangmanComponent()"></app-doors>
-    <app-hangman *ngIf="showHangman && livesNumber != 0" (sustractOneLive)="subtractOneLive()" (returnHome)="returnHome()"></app-hangman>
+    <app-hangman *ngIf="showHangman && livesNumber != 0" (sustractOneLive)="subtractOneLive()" (returnHome)="returnHome()" (showBirthdayCard)="showBirthdayComponent()"></app-hangman>
+    <app-happy-birthday *ngIf="showBirthday && livesNumber != 0"></app-happy-birthday>
     <app-game-over *ngIf="livesNumber == 0" (restartGameInQuizz)="restartGame()"></app-game-over>
   </section>
 </main>

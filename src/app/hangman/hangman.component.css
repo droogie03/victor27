@@ -90,3 +90,41 @@
   border: none;
   cursor: pointer;
   }
+
+  .buttonNextGame{
+    font-size: large;
+    position: fixed;
+    bottom: 50px; 
+    right: 50px;
+    padding: 10px 20px;
+    background-color: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    animation: pulse 2s ease infinite;
+    opacity: 0.8;
+    transition: all 0.2s ease-in;
+}
+
+    .buttonNextGame:hover{
+        border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  outline-offset: 15px;
+  outline-color: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px 2px #427388;
+    }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}

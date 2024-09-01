@@ -9,6 +9,7 @@ export class HangmanComponent{
 
   @Output() sustractOneLive: EventEmitter<void> = new EventEmitter<void>();
   @Output() returnHome: EventEmitter<void> = new EventEmitter<void>();
+  @Output() showBirthdayCard: EventEmitter<void> = new EventEmitter<void>();
   isExplanationClicked: boolean = false;
   isPistaClicked: boolean = false;
   restartGameBtnShown = false;
@@ -28,6 +29,11 @@ export class HangmanComponent{
   reset() {
     this.guesses = [];
     this.restartGameBtnShown = false;
+  }
+
+  nextComponent():void{
+    console.log("ntra en siguiente componente");
+    this.showBirthdayCard.emit();
   }
 
   onGameFinished(isWordGuessed: boolean) {

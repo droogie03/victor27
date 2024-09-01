@@ -12,6 +12,7 @@
         </button>
       </ng-template>
     <button class="explanation-quizz" (click)="changeExplanationStatus()">EXPLICACIÓN</button>
+    <button *ngIf="isWordGuessed" class="buttonNextGame" (click)="nextComponent()">FIN</button>
 </div>
 <div *ngIf="isExplanationClicked" class="popup-explanation">
     <h2><b>EL JUEGO DEL AHORCADO</b></h2>

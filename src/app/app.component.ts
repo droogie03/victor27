@@ -20,6 +20,7 @@ export class AppComponent implements OnInit{
   showDoors: boolean = false;
   showHangman: boolean = false;
   showGameOver: boolean = false;
+  showBirthday: boolean = false;
 
   showBrokenHeart: boolean = false;
 
@@ -70,6 +71,14 @@ export class AppComponent implements OnInit{
     this.showQuizz = false;
     this.showExplanation = false;
     this.showHangman = true;
+  }
+
+  showBirthdayComponent():void{
+    this.showHangman = false;
+    this.showHome = false;
+    this.showQuizz = false;
+    this.showExplanation = false;
+    this.showBirthday = true;
   }
 
   subtractOneLive():void{
