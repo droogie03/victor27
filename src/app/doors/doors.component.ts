@@ -34,7 +34,7 @@ export class DoorsComponent implements OnInit{
     this.doorsInformation[index].src = '../assets/open-door.png';
     setTimeout(() => {
       this.showAnswer = true;
-    }, 500);
+    }, 300);
     
   }
 

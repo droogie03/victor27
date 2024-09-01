@@ -108,7 +108,6 @@
 }
 
 .answer-explanation{
-    background: rgb(210, 210, 210);
     position: absolute;
     top: 25%;
     left: 50%;
@@ -116,8 +115,12 @@
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
-    border-radius: 10px;
     padding: 10px 30px 30px 30px;
+    font-family: "Questrial", sans-serif;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   .answer-explanation h1{
