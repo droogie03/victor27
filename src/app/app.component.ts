@@ -21,6 +21,8 @@ export class AppComponent implements OnInit{
   showHangman: boolean = false;
   showGameOver: boolean = false;
 
+  showBrokenHeart: boolean = false;
+
   constructor(private datepipe: DatePipe){}
 
   ngOnInit(): void {
@@ -43,6 +45,7 @@ export class AppComponent implements OnInit{
     this.showQuizz = false; 
     this.showGameOver = false;
     this.showHome = true;
+    this.livesNumber = 3;
   }
 
   victorIsReadyToStart():void{
@@ -68,6 +71,10 @@ export class AppComponent implements OnInit{
 
   subtractOneLive():void{
     this.livesNumber--;
+    this.showBrokenHeart = true;
+    setTimeout(() => {
+      this.showBrokenHeart = false;
+    }, 1500);
   }
 
   restartGame(): void{

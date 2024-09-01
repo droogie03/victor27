@@ -53,7 +53,7 @@
 
 
 .images img{
-  width: 50px; /* Ancho de las imágenes pequeñas */
+  width: 50px; 
   height: auto;
 }
 
@@ -110,6 +110,40 @@ a:before, a:after{
 
 a:hover:before, a:hover:after{
   display: block;
+}
+
+.vader{
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  animation: growRotate 1.3s linear forwards; 
+}
+
+@keyframes growRotate {
+  0% {
+    opacity: 1; 
+    transform: scale(2.5) translateY(-50px); 
+  }
+  20% {
+    opacity: 1; 
+    transform: scale(2) translateY(-45px); 
+  }
+  40% {
+    opacity: 1; 
+    transform: scale(1.5) translateY(-40px); 
+  }
+  60% {
+    opacity: 0.5; 
+    transform: scale(1) translateY(-35px); 
+  }
+  80% {
+    opacity: 0.5; 
+    transform: scale(0.5) translateY(-30px); 
+  }
+  100% {
+    opacity: 0; 
+    transform: scale(0) translateY(0px); 
+  }
 }
 
 

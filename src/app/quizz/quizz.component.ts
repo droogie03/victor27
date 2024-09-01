@@ -15,10 +15,10 @@ export class QuizzComponent {
 
   questions: any[] = [
     {
-      question: "¿Cuál es el planeta más grande del sistema solar?",
+      question: "¿Cuántos son 3+2x5?",
       answers: [
-        { text: "Sí", solution: true},
-        { text: "No", solution: false}
+        { text: "13", solution: true},
+        { text: "25", solution: false}
       ]
     },
     {

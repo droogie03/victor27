@@ -1,11 +1,14 @@
 <main>
   <header>
     <div class="container">
-      <div *ngIf="isVictorReady" class="images"><a href="#" data-tip="Estas son tus vidas">
-        <img *ngIf="livesNumber > 0" class="vader" [src]="'/assets/full-heart.png'" >
-        <img *ngIf="livesNumber > 1" class="vader1" [src]="'/assets/full-heart.png'" >
-        <img *ngIf="livesNumber == 3" class="vader2" [src]="'/assets/full-heart.png'" >
-      </a></div>
+      <div *ngIf="isVictorReady" class="images">
+        <a href="#" data-tip="Estas son tus vidas">
+          <img *ngIf="livesNumber > 0" [src]="'/assets/full-heart.png'" >
+          <img *ngIf="livesNumber > 1" [src]="'/assets/full-heart.png'" >
+          <img *ngIf="livesNumber == 3" [src]="'/assets/full-heart.png'" >
+        </a>
+        <div><img *ngIf="showBrokenHeart" class="vader" [src]="'/assets/corazon-roto.png'" ></div>
+      </div>
       <div [ngClass]="(showHome || showGameOver) ? 'disabled' : 'welcome'" (click) = "returnHome()"><h1 class="bigger">VICTOR IN BORDERLAND</h1></div>
     </div>
   </header>
