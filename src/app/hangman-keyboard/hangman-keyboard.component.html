@@ -1,0 +1,13 @@
+<div class="keyboard">
+    <div class="keys">
+      <div
+        (click)="onKeyClick(key)"
+        class="key-char"
+        *ngFor="let key of keys"
+        [class.disabled-key]="key.guessed">
+        <div >
+          {{key.value}}
+        </div>
+      </div>
+    </div>
+  </div>

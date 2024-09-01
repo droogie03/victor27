@@ -1,0 +1,28 @@
+.keyboard {
+    max-width: 600px;
+    margin: 30px auto;
+    
+  }
+
+  .keys {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .key-char{
+    background: purple;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .disabled-key{
+    background: rgb(173, 161, 173);
+  }
+
+  .disabled-key:hover{
+    cursor: no-drop;
+  }

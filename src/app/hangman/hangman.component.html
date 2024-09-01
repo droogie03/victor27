@@ -1,7 +1,10 @@
 <div class="container" [class.blurred]="isExplanationClicked || isPistaClicked">
-    <img class="background" [src]="'/assets/alice-card.jpg'" >
+    <div class="hangman">
+        <app-hangman-display [guesses]="guesses" [answer]="answer" (gameFinished)="onGameFinished($event)"></app-hangman-display>
+        <app-hangman-question [guesses]="guesses" [answer]="answer"></app-hangman-question>
+        <app-hangman-keyboard (keyPressed)="guess($event)" [answer]="answer"></app-hangman-keyboard>
+    </div>
     <button class="explanation-quizz" (click)="changeExplanationStatus()">EXPLICACIÓN</button>
-    
 </div>
 <div *ngIf="isExplanationClicked" class="popup-explanation">
     <h2><b>EL JUEGO DEL AHORCADO</b></h2>

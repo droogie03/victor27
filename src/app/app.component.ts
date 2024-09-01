@@ -66,6 +66,9 @@ export class AppComponent implements OnInit{
 
   showHangmanComponent():void{
     this.showDoors = false;
+    this.showHome = false;
+    this.showQuizz = false;
+    this.showExplanation = false;
     this.showHangman = true;
   }
 

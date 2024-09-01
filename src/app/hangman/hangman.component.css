@@ -10,7 +10,7 @@
     margin: 0; 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     transition: 0.5s;
 }
 
@@ -20,7 +20,7 @@
 
 .explanation-quizz{
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 5%;
     padding: 5px 20px;
     display: inline-block;
@@ -68,4 +68,11 @@
   .button-containers{
     display: flex;
     justify-content: space-evenly;
+  }
+
+  .hangman {
+    display: flex;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
   }

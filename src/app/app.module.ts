@@ -10,6 +10,9 @@ import { GameOverComponent } from './game-over/game-over.component';
 import { CountdownComponent } from './countdown/countdown.component';
 import { DoorsComponent } from './doors/doors.component';
 import { HangmanComponent } from './hangman/hangman.component';
+import { HangmanDisplayComponent } from './hangman-display/hangman-display.component';
+import { HangmanKeyboardComponent } from './hangman-keyboard/hangman-keyboard.component';
+import { HangmanQuestionComponent } from './hangman-question/hangman-question.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { HangmanComponent } from './hangman/hangman.component';
     GameOverComponent,
     CountdownComponent,
     DoorsComponent,
-    HangmanComponent
+    HangmanComponent,
+    HangmanDisplayComponent,
+    HangmanKeyboardComponent,
+    HangmanQuestionComponent
   ],
   imports: [
     BrowserModule,
