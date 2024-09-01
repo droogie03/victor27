@@ -26,6 +26,9 @@ export class HangmanDisplayComponent implements OnChanges{
       const char = [...guessesCurrentValue].pop();
       this.checkGuess(char);
     }
+    if(guessesCurrentValue.length == 0){
+      this.mistakesRemaining = this.MAX_MISTAKES;
+    }
   }
 
   checkGuess(letter: string) {

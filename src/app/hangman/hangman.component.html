@@ -1,9 +1,16 @@
 <div class="container" [class.blurred]="isExplanationClicked || isPistaClicked">
     <div class="hangman">
         <app-hangman-display [guesses]="guesses" [answer]="answer" (gameFinished)="onGameFinished($event)"></app-hangman-display>
-        <app-hangman-question [guesses]="guesses" [answer]="answer"></app-hangman-question>
-        <app-hangman-keyboard (keyPressed)="guess($event)" [answer]="answer"></app-hangman-keyboard>
+        <ng-container *ngIf="!restartGameBtnShown else restartGameBtn">
+            <app-hangman-question [guesses]="guesses" [answer]="answer"></app-hangman-question>
+            <app-hangman-keyboard (keyPressed)="guess($event)" [answer]="answer"></app-hangman-keyboard>
+        </ng-container>
     </div>
+    <ng-template #restartGameBtn>
+        <button class="restart-hangman" (click)="reset()">
+          {{'RESTART GAME'}}
+        </button>
+      </ng-template>
     <button class="explanation-quizz" (click)="changeExplanationStatus()">EXPLICACIÓN</button>
 </div>
 <div *ngIf="isExplanationClicked" class="popup-explanation">

@@ -12,6 +12,7 @@ export class HangmanComponent{
   isExplanationClicked: boolean = false;
   isPistaClicked: boolean = false;
   restartGameBtnShown = false;
+  isWordGuessed: boolean = false;
 
   answer: string = "carsbonara";
   guesses: string[] = [];
@@ -29,13 +30,10 @@ export class HangmanComponent{
     this.restartGameBtnShown = false;
   }
 
-  dummyClick(): void{
-    const key = prompt('enter a key') || '';
-    this.guess(key);
-  }
-
   onGameFinished(isWordGuessed: boolean) {
-    this.restartGameBtnShown = isWordGuessed;
+    if(!isWordGuessed) this.sustractOneLive.emit();
+    this.isWordGuessed = isWordGuessed;
+    this.restartGameBtnShown = !isWordGuessed;
   }
 
   changeExplanationStatus():void{
