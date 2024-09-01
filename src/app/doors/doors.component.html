@@ -1,9 +1,18 @@
 <div class="container" [class.blurred]="isExplanationClicked">
-    <img class="background" [src]="'/assets/alice-card.jpg'" >
     <button class="explanation-quizz" (click)="changeExplanationStatus()">EXPLICACIÓN</button>
-    <div clas="images-container">
-        
+    <div clas="images-container" *ngFor="let image of doorsInformation; let i = index">
+        <div (click)="isImageClicked(i)" style="cursor: pointer;"><img class="door-images" [src]="image.src" ></div>
     </div>
+    <div class="answer-explanation" *ngIf="showAnswer">
+        <h1>{{isCorrectAnswerSelected ? 'Puerta correcta' : 'Puerta equivocada'}}</h1>
+        <p>{{isCorrectAnswerSelected ? 'Aquí tienes tu regalo:' : 'Esta es tu muerte:'}}</p>
+        <div>
+            <img [src]="isCorrectAnswerSelected ? '../assets/qtea.jpg' : '../assets/toji.png'">
+        </div>
+        <button class="close-popup-explanation" (click)="closeAnswerExplanation()">Cerrar</button>
+    </div>
+    
+    <button *ngIf="isCorrectAnswerSelected"  class="buttonNextGame" (click)="nextGame()">SIGUIENTE</button>
     
 </div>
 <div *ngIf="isExplanationClicked" class="popup-explanation">

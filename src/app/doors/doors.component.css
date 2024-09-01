@@ -20,7 +20,7 @@
 
 .explanation-quizz{
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 5%;
     padding: 5px 20px;
     display: inline-block;
@@ -96,5 +96,43 @@
     100% {
         transform: scale(1);
     }
+}
+
+.images-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.door-images{
+    margin: 10px;
+}
+
+.answer-explanation{
+    background: rgb(210, 210, 210);
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 10px 30px 30px 30px;
+  }
+
+  .answer-explanation h1{
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+  }
+
+  .answer-explanation img {
+    width: 100%;  /* La imagen se ajusta al ancho del contenedor */
+    height: 300px; /* Define la altura deseada */
+    object-fit: contain; /* Mantiene la proporción de la imagen dentro de las dimensiones dadas */
+    display: block;
+    margin: 0 auto;   /* Centrar la imagen horizontalmente */
 }
 
