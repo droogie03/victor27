@@ -30,10 +30,29 @@ export class QuizzComponent {
       ]
     },
     {
+      question: "¿Quién es el jefe/a del Team Rocket?",
+      answers: [
+        { text: "Jessie", solution: false},
+        { text: "James", solution: false},
+        { text: "Meowth", solution: false},
+        { text: "Giovanni", solution: true}
+      ]
+    },
+    {
       question: "¿Es tu novia la mejor?",
       answers: [
         { text: "Sí", solution: true},
         { text: "No", solution: false}
+      ]
+    },
+    {
+      question: "Rei ayanami es la portadora del alma de ...",
+      answers: [
+        { text: "Nadie, ella tiene su propia alma", solution: false},
+        { text: "Yui Ikari, la madre de Shinji Ikari", solution: false},
+        { text: "Adam, el primer ángel", solution: false},
+        { text: "Lilith, el segundo ángel", solution: true},
+        { text: "Gendo Ikari, el padre de Shinji Ikari", solution: false},
       ]
     },
     {
