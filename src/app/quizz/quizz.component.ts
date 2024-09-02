@@ -50,8 +50,8 @@ export class QuizzComponent {
       answers: [
         { text: "Nadie, ella tiene su propia alma", solution: false},
         { text: "Yui Ikari, la madre de Shinji Ikari", solution: false},
-        { text: "Adam, el primer ángel", solution: false},
         { text: "Lilith, el segundo ángel", solution: true},
+        { text: "Adam, el primer ángel", solution: false},
         { text: "Gendo Ikari, el padre de Shinji Ikari", solution: false},
       ]
     },
