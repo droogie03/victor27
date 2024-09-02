@@ -11,6 +11,7 @@ export class DoorsComponent implements OnInit{
   @Output() showHangmanGame: EventEmitter<void> = new EventEmitter<void>();
   isExplanationClicked: boolean = false;
   isCorrectAnswerSelected: boolean = false;
+  isCorrectAnswerSelectedOnce: boolean = false;
   showAnswer: boolean = false;
   doorsInformation: any[] = [
     {
@@ -27,10 +28,15 @@ export class DoorsComponent implements OnInit{
   ngOnInit(): void {
     let randomNumber = Math.floor(Math.random() * this.doorsInformation.length);
     this.doorsInformation[randomNumber].answer = true;
+    console.log(this.doorsInformation);
   }
 
   isImageClicked(index: number): void{
-    if(this.doorsInformation[index].answer) this.isCorrectAnswerSelected = true;
+    if(this.doorsInformation[index].answer) {
+      this.isCorrectAnswerSelected = true;
+      this.isCorrectAnswerSelectedOnce = true;
+    }
+    if(!this.doorsInformation[index].answer) this.isCorrectAnswerSelected = false;
     this.doorsInformation[index].src = '../assets/open-door.png';
     setTimeout(() => {
       this.showAnswer = true;
@@ -54,5 +60,6 @@ export class DoorsComponent implements OnInit{
   nextGame(): void{
     this.showHangmanGame.emit();
   }
+
 
 }

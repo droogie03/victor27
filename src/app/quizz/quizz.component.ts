@@ -22,6 +22,14 @@ export class QuizzComponent {
       ]
     },
     {
+      question: "¿Alguna vez has cortado el cable ADSL dejando sin internet a toda tu familia?",
+      answers: [
+        { text: "No", solution: false},
+        { text: "Sí", solution: true},
+        { text: "Yo? Jamás haría eso", solution: false}
+      ]
+    },
+    {
       question: "¿Es tu novia la mejor?",
       answers: [
         { text: "Sí", solution: true},

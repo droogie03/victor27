@@ -12,7 +12,7 @@
         <button class="close-popup-explanation" (click)="closeAnswerExplanation()">Cerrar</button>
     </div>
     
-    <button *ngIf="isCorrectAnswerSelected"  class="buttonNextGame" (click)="nextGame()">SIGUIENTE</button>
+    <button *ngIf="isCorrectAnswerSelectedOnce"  class="buttonNextGame" (click)="nextGame()">SIGUIENTE</button>
     
 </div>
 <div *ngIf="isExplanationClicked" class="popup-explanation">
